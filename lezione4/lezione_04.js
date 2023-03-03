@@ -39,3 +39,39 @@
 //     }
 //     return true;
 // }
+
+let vuoto ={};
+let pieno ={ banana: "gialla"};
+
+function isEmpty(obj){
+    for (i in obj){
+        return true;
+    }
+    return false;
+}
+
+console.log(isEmpty(vuoto));
+console.log(isEmpty(pieno));
+
+
+let calciatori =[
+    {nome:"marco", cognome:"s", numero:6},
+    {nome:"salmo", cognome:"v", numero:6},
+    {nome:"sasso", cognome:"d", numero:6},
+    {nome:"sesso", cognome:"g", numero:6},
+    {nome:"spasmo", cognome:"h", numero:10},
+    {nome:"pesto", cognome:"j", numero:10},
+    {nome:"resto", cognome:"k", numero:10},
+    {nome:"cesto", cognome:"l", numero:6},
+
+]
+
+function numeri10(obj){
+    for(calciatori of obj){
+        if(calciatori.numero == 10){
+            console.log(calciatori.nome+ " " +calciatori.cognome)
+        }
+    }
+}
+
+numeri10(calciatori);
