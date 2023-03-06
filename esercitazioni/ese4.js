@@ -1,15 +1,17 @@
-function makeAutomobile(nomeModello, nomeMarca){
-    return {
-        nomeModello,
-        nomeMarca
+class Automobile{
+    auto = "punto";
+    auto1 = "fiat";
+    auto2 = "bmw"
+}
+
+class Garage {
+    
+    
+    constructor (auto) {
+    this.auto= auto;
     }
-}
 
-let garage = {
-    automobili: []
-}
-
-garage.validaAuto = function(auto){
+    validaAuto (auto){
     if (auto === null || auto === undefined){
         return false;
     }
@@ -19,15 +21,15 @@ garage.validaAuto = function(auto){
     }
 
     return false;
-}
-garage.inserisciAuto = function(auto){
-    if (this.validaAuto(auto)){
-        let indice = this.automobili.length;
-        this.automobili[indice] = auto; 
     }
-}
+    inserisciAuto (auto){
+    if (this.validaAuto(auto)){
+        let indice = this.Automobile.length;
+        this.[indice] = auto; 
+    }
+    }
 
-garage.rimuoviAuto = function(auto){
+    rimuoviAuto (auto){
     if (this.validaAuto(auto)){
         let indiceDaEliminare = -1;
         for (let indice = 0; indice < this.automobili.length; indice++) {
@@ -45,11 +47,17 @@ garage.rimuoviAuto = function(auto){
     }
 }
 
-garage.stampaAuto = function(nomeMarca){
+    stampaAuto (nomeMarca){
     for (const auto of this.automobili) {
         if (nomeMarca === auto.nomeMarca){
             console.log(auto.nomeMarca +" "+ auto.nomeModello);
         }
     }
 }
+}
+
+
+let bo = new Automobile("punto");
+
+
 
