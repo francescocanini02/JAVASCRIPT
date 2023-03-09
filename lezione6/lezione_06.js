@@ -1,4 +1,35 @@
 
+// USO DI SUPER
+
+// class Persona {
+//   constructor(nome, cognome) {
+//     this.nome = nome;
+//     this.cognome = cognome;
+//   }
+  
+//   saluta() {
+//     console.log(`Ciao, sono ${this.nome} ${this.cognome}`);
+//   }
+// }
+
+// class Studente extends Persona {
+//   constructor(nome, cognome, corso) {
+//     super(nome, cognome);
+//     this.corso = corso;
+//   }
+  
+//   saluta() {
+//     super.saluta();
+//     console.log(`Studio ${this.corso}`);
+//   }
+// }
+
+// const studente = new Studente("Mario", "Rossi", "Informatica");
+// studente.saluta(); // Output: "C
+
+
+
+
 //   let numeri = [1,2,3];
 
 // let scorri = function(elemento){
